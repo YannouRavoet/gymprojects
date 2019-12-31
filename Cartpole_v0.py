@@ -1,3 +1,8 @@
+'''
+STANFORD PAPER: Human-level control through deep reinforcement learning
+https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf
+'''
+
 import gym
 import random
 import numpy as np
@@ -55,7 +60,12 @@ class DQNSolver:
             return random.randrange(self.action_space)
         q_values = self.model.predict(state)
         return np.argmax(q_values[0])
-
+    '''
+    Experience Replay:
+    Instead of performing a network update immediately 
+    after each “experience” (action, state, reward, following state), 
+    these experiences are stored in memory and sampled from randomly.
+    '''
     def experience_replay(self):
         if len(self.memory) < BATCH_SIZE:
             return
@@ -95,7 +105,7 @@ def cartpole():
     action_space = env.action_space.n
     agent = DQNSolver(observation_space, action_space)
     agent.load_model()
-    if True:
+    if False:
         scores = []
         for i in range(TRAIN_ITERATIONS):
             state = env.reset()
