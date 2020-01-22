@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5050e8e2-0afa-4d4a-927a-e7663c243862" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Breakout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/argparser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Taxi-v3/taxi_qtable_0.0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wrappers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gymprojects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gymprojects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cartpole_v0.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cartpole_v0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taxi_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Taxi_v3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/CartPole-v0/default.data-00001-of-00002" beforeDir="false" afterPath="$PROJECT_DIR$/models/CartPole-v0/default.data-00001-of-00002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/CartPole-v0/default.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/CartPole-v0/default.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Taxi-v3/taxi_qtable.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +34,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="7243ca09-ee61-4b69-9f93-130f4e1da528" />
   <component name="ProjectId" id="1Va3ZeJ7KQHzlK7AULEodV7NLzx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -31,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/anaconda3/envs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,6 +59,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/code" />
       <recent name="$PROJECT_DIR$/models/Taxi-v3" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -49,6 +68,56 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.Cartpole_v0">
+    <configuration name="Breakout" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="gymprojects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="DockerContainerSettingsRunConfigurationExtension">
+        <option name="envVars">
+          <list />
+        </option>
+        <option name="extraHosts">
+          <list />
+        </option>
+        <option name="links">
+          <list />
+        </option>
+        <option name="networkDisabled" value="false" />
+        <option name="networkMode" value="bridge" />
+        <option name="portBindings">
+          <list />
+        </option>
+        <option name="publishAllPorts" value="false" />
+        <option name="version" value="1" />
+        <option name="volumeBindings">
+          <list>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/opt/project" />
+              <option name="editable" value="true" />
+              <option name="hostPath" value="$PROJECT_DIR$" />
+              <option name="readOnly" value="false" />
+            </DockerVolumeBindingImpl>
+          </list>
+        </option>
+      </EXTENSION>
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Breakout.py" />
+      <option name="PARAMETERS" value="-t 10 -e 10 -s" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Cartpole_v0" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="gymprojects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -61,9 +130,48 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="DockerContainerSettingsRunConfigurationExtension">
+        <option name="envVars">
+          <list>
+            <DockerEnvVarImpl>
+              <option name="name" value="DISPLAY" />
+              <option name="value" value=":0" />
+            </DockerEnvVarImpl>
+          </list>
+        </option>
+        <option name="extraHosts">
+          <list />
+        </option>
+        <option name="links">
+          <list />
+        </option>
+        <option name="networkDisabled" value="false" />
+        <option name="networkMode" value="host" />
+        <option name="portBindings">
+          <list />
+        </option>
+        <option name="publishAllPorts" value="false" />
+        <option name="version" value="1" />
+        <option name="volumeBindings">
+          <list>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/opt/project" />
+              <option name="editable" value="true" />
+              <option name="hostPath" value="$PROJECT_DIR$" />
+              <option name="readOnly" value="false" />
+            </DockerVolumeBindingImpl>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/tmp/.X11-unix" />
+              <option name="editable" value="true" />
+              <option name="hostPath" value="/tmp/.X11-unix" />
+              <option name="readOnly" value="false" />
+            </DockerVolumeBindingImpl>
+          </list>
+        </option>
+      </EXTENSION>
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cartpole_v0.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="-l -lv &quot;default&quot; -t 1 -e 1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -83,8 +191,69 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="DockerContainerSettingsRunConfigurationExtension">
+        <option name="envVars">
+          <list>
+            <DockerEnvVarImpl>
+              <option name="name" value="DISPLAY" />
+              <option name="value" value=":0" />
+            </DockerEnvVarImpl>
+          </list>
+        </option>
+        <option name="extraHosts">
+          <list />
+        </option>
+        <option name="links">
+          <list />
+        </option>
+        <option name="networkDisabled" value="false" />
+        <option name="networkMode" value="host" />
+        <option name="portBindings">
+          <list />
+        </option>
+        <option name="publishAllPorts" value="false" />
+        <option name="version" value="1" />
+        <option name="volumeBindings">
+          <list>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/opt/project" />
+              <option name="editable" value="true" />
+              <option name="hostPath" value="$PROJECT_DIR$" />
+              <option name="readOnly" value="false" />
+            </DockerVolumeBindingImpl>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/tmp/.X11-unix" />
+              <option name="editable" value="true" />
+              <option name="hostPath" value="/tmp/.X11-unix" />
+              <option name="readOnly" value="false" />
+            </DockerVolumeBindingImpl>
+          </list>
+        </option>
+      </EXTENSION>
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Taxi_v3.py" />
+      <option name="PARAMETERS" value="-l -t 0 -e 0 -r -s" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="envwrapper" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="gymprojects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wrappers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -93,10 +262,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="" />
+          <option name="commandLineOptions" value="-rm" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Python.Breakout" />
+      <item itemvalue="Python.Cartpole_v0" />
+      <item itemvalue="Python.envwrapper" />
+      <item itemvalue="Python.Taxi_v3" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Cartpole_v0" />
         <item itemvalue="Python.Taxi_v3" />
+        <item itemvalue="Python.Breakout" />
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Python.envwrapper" />
       </list>
     </recent_temporary>
   </component>
@@ -104,6 +297,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.11979753" />
           <treeState>
             <expand />
             <select />
@@ -132,49 +326,161 @@
       <workItem from="1577660843036" duration="1158000" />
       <workItem from="1577694568070" duration="5414000" />
       <workItem from="1577743016477" duration="569000" />
-      <workItem from="1577775441076" duration="5356000" />
+      <workItem from="1577775441076" duration="5400000" />
+      <workItem from="1578249863732" duration="2740000" />
+      <workItem from="1579198090828" duration="2967000" />
+      <workItem from="1579279329687" duration="2531000" />
+      <workItem from="1579371227975" duration="132000" />
+      <workItem from="1579449369756" duration="554000" />
+      <workItem from="1579616689664" duration="4161000" />
+      <workItem from="1579620860325" duration="11252000" />
+      <workItem from="1579684022952" duration="2464000" />
+      <workItem from="1579705591800" duration="4642000" />
+      <workItem from="1579710242348" duration="728000" />
+      <workItem from="1579710978428" duration="4811000" />
+      <workItem from="1579715806850" duration="136000" />
+      <workItem from="1579717544155" duration="6606000" />
+      <workItem from="1579725541646" duration="1415000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1874" height="405" key="GridCell.Tab.0.bottom" timestamp="1577801418112">
-      <screen x="3840" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="405" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1577640516436" />
-    <state width="1874" height="405" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1577801418112" />
-    <state width="1874" height="405" key="GridCell.Tab.0.center" timestamp="1577801418112">
-      <screen x="3840" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="405" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1577640516436" />
-    <state width="1874" height="405" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1577801418112" />
-    <state width="1874" height="405" key="GridCell.Tab.0.left" timestamp="1577801418112">
-      <screen x="3840" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="405" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1577640516435" />
-    <state width="1874" height="405" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1577801418112" />
-    <state width="1874" height="405" key="GridCell.Tab.0.right" timestamp="1577801418112">
-      <screen x="3840" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1807" height="405" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1577640516436" />
-    <state width="1874" height="405" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1577801418112" />
-    <state x="2402" y="187" key="SettingsEditor" timestamp="1577640386602">
+    <state x="2587" y="110" width="642" height="885" key="#Dockerfile" timestamp="1579711286649">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2402" y="187" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1577640386602" />
+    <state x="2587" y="110" width="642" height="885" key="#Dockerfile/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579711286649" />
+    <state x="2503" y="263" width="800" height="677" key="#Environment_variables" timestamp="1579711680924">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2503" y="263" width="800" height="677" key="#Environment_variables/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579711680924" />
+    <state x="2503" y="213" width="800" height="677" key="#Volume_binding" timestamp="1579711664199">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2503" y="213" width="800" height="677" key="#Volume_binding/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579711664199" />
+    <state x="2371" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579713272388">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2371" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579713272388" />
+    <state x="576" y="13" width="748" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579626750012">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="576" y="13" width="748" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579626750012" />
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1578252270802">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252270802" />
+    <state x="2691" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579726042091">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2691" y="310" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579726042091" />
+    <state width="1807" height="390" key="GridCell.Tab.0.bottom" timestamp="1579726626829">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1807" height="390" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579726626829" />
+    <state width="1874" height="354" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579641889776" />
+    <state width="1807" height="392" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
+    <state width="1807" height="390" key="GridCell.Tab.0.center" timestamp="1579726626829">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1807" height="390" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579726626829" />
+    <state width="1874" height="354" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579641889776" />
+    <state width="1807" height="392" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
+    <state width="1807" height="390" key="GridCell.Tab.0.left" timestamp="1579726626829">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1807" height="390" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579726626829" />
+    <state width="1874" height="354" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579641889776" />
+    <state width="1807" height="392" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
+    <state width="1807" height="390" key="GridCell.Tab.0.right" timestamp="1579726626829">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1807" height="390" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579726626829" />
+    <state width="1874" height="354" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579641889776" />
+    <state width="1807" height="392" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
+    <state width="1807" height="342" key="GridCell.Tab.1.bottom" timestamp="1579725532468">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1807" height="342" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579725532468" />
+    <state width="1874" height="354" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579641889776" />
+    <state width="1807" height="342" key="GridCell.Tab.1.center" timestamp="1579725532468">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1807" height="342" key="GridCell.Tab.1.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579725532468" />
+    <state width="1874" height="354" key="GridCell.Tab.1.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579641889776" />
+    <state width="1807" height="342" key="GridCell.Tab.1.left" timestamp="1579725532468">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1807" height="342" key="GridCell.Tab.1.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579725532468" />
+    <state width="1874" height="354" key="GridCell.Tab.1.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579641889776" />
+    <state width="1807" height="342" key="GridCell.Tab.1.right" timestamp="1579725532468">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1807" height="342" key="GridCell.Tab.1.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579725532468" />
+    <state width="1874" height="354" key="GridCell.Tab.1.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579641889776" />
+    <state x="1987" y="92" key="SettingsEditor" timestamp="1579726516246">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1987" y="92" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579726516246" />
+    <state x="2568" y="162" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579623111722" />
     <state x="2640" y="225" width="536" height="655" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577546975861">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2640" y="225" width="536" height="655" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1577546975861" />
+    <state x="3840" y="85" width="1401" height="641" maximized="true" key="dock-window-1" timestamp="1579725734103">
+      <screen x="3840" y="0" width="1920" height="1080" />
+    </state>
+    <state x="3840" y="85" width="1401" height="641" maximized="true" key="dock-window-1/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579725734103" />
+    <state x="2197" y="27" width="1328" height="1038" maximized="true" key="dock-window-1/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579623521131" />
+    <state x="2317" y="306" width="1328" height="1038" key="dock-window-2" timestamp="1579624382475">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2317" y="306" width="1328" height="1038" key="dock-window-2/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579624382475" />
+    <state x="67" y="0" width="1853" height="1055" maximized="true" key="dock-window-3" timestamp="1579626420626">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="67" y="0" width="1853" height="1055" maximized="true" key="dock-window-3/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579626420626" />
+    <state x="2081" y="27" width="1328" height="606" maximized="true" key="dock-window-4" timestamp="1579626432914">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2081" y="27" width="1328" height="606" maximized="true" key="dock-window-4/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579626432914" />
+    <state x="2337" y="27" width="710" height="606" maximized="true" key="dock-window-5" timestamp="1579631030858">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2337" y="27" width="710" height="606" maximized="true" key="dock-window-5/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579631030858" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1579628222211">
+      <screen x="3840" y="0" width="1920" height="1080" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579628222211" />
     <state x="2576" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1577547551219">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2576" y="257" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1577547551218" />
+    <state x="2638" y="433" width="540" height="238" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579709558492">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2638" y="433" width="540" height="238" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579709558492" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/wrappers.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/gymprojects$Taxi_v3.coverage" NAME="Taxi_v3 Coverage Results" MODIFIED="1577639230140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/gymprojects$Cartpole_v0.coverage" NAME="Cartpole_v0 Coverage Results" MODIFIED="1577801418104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gymprojects$Breakout.coverage" NAME="Breakout Coverage Results" MODIFIED="1579723731364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
+    <SUITE FILE_PATH="coverage/gymprojects$Taxi_v3.coverage" NAME="Taxi_v3 Coverage Results" MODIFIED="1579726600376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gymprojects$envwrapper.coverage" NAME="envwrapper Coverage Results" MODIFIED="1579623154901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gymprojects$Cartpole_v0.coverage" NAME="Cartpole_v0 Coverage Results" MODIFIED="1579726626820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
