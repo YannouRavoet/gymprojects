@@ -37,7 +37,7 @@
                 possible states. The agent can choose between 6 actions: <i>pickup, dropoff, south, north, east, west</i>. At each timestep, the agent's score decreases
                 by 1, forcing the agent to act promptly. A successful delivery of the passenger is reward with +20 points. An illegal attempt of the <i>pickup</i> or
                 <i>dropoff</i> action is penalized with -10 points. The environment ends when the passenger is successfully dropped off.</p>
-            <h5>The Solution...</h5>
+            <h5>The Solution... (<a href="https://github.com/YannouRavoet/gymprojects/blob/master/Taxi_v3.py">github</a>)</h5>
             <p> We first initialize a q-table of 6 rows by 500 columns that defines for each state how useful each action is. Since we have no clue how useful each
                 action is, we just initialize all values to 1. This means, we will first need to explore our environment a bit, before our agent can create the optimal
                 policy. To do this, we define an <i>exploration rate</i> that is initially set to 1 and steadily decreases to a small value such as 0.1. This value
@@ -48,21 +48,31 @@
         <div class="col-md-6 support">
         </div>
     </div>
-    <div id="Deep Q-Network" class="row" style="margin: 0;">
+    <div id="DeepQ-Network" class="row" style="margin: 0;">
 
         <div class="col-md-6 description">
-            <h1>DQN</h1>
+            <h1>Deep Q-Network</h1>
             <h3>Theory</h3>
             <p>Q-learning is all good and well, but what if the state space is continuous. In that case we want a function that can generalize over unseen values. This function
-               can be modelled as a deep neural network, hence the name Deep Q-Network, DQN.</p>
+               can be modelled as a deep neural network, hence the name Deep Q-Network, DQN. To increase the training efficiency, we train the network in batches, doing all calculations
+               of q-values on a set of examples, and then using those examples and there corresponding q-values to update the weights of the network. In order to reduce the correlation
+               between the examples in each batch we implement an experience memory buffer that stores all the agent's experiences. Every time we want to train a batch, we randomly select
+               a set of experiences from this memory.</p>
             <h3>Practice</h3>
             <h5>The challenge...</h5>
-            <h5>The solution...</h5>
+            <p> The <a href="https://gym.openai.com/envs/CartPole-v0/">CartPole-v0</a> (<a href="https://github.com/openai/gym/wiki/CartPole-v0">github</a>) environment describes its state
+                space with four continuous values: <i>cart position, cart velocity, pole angle</i> and <i>pole velocity at tip</i>. The CartPole environment has an extremely complex set of
+                possible actions: <i>right</i> and <i>left</i>. As such, we want to create a function that takes 4 continuous outputs and tells our agent whether to go right or left.</p>
+            <h5>The solution... (<a href="https://github.com/YannouRavoet/gymprojects/blob/master/Cartpole_v0.py">github</a>)</h5>
+            <p> The first thing to do, is to create a neural network structure. We know we have a 4 node input and we can create a 2 node input, where we simply select the node with the highest output.
+                In between these we create two 24 node layers (with a ReLu activation). Since our output layers use a simple linear activation function, we use a mean squared error loss function.
+                Next, we need to implement our memory buffer. To do this, we create a deque with a max length of say... 1 million examples. We choose a batch size of 32 and in the same manner as with the
+                Taxi-v3 environment, we start with an exploration rate of 1 that decays over time to 0.001.</p>
         </div>
         <div class="col-md-6 support">
         </div>
     </div>
-    <div id="Dueling Deep Q-Network" class="row" style="margin: 0;">
+    <div id="DoubleDeepQ-Network" class="row" style="margin: 0;">
         <div class="col-md-6 description">
             <h1>Double DQN</h1>
             <p>Test this and that</p>

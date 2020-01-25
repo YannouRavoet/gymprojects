@@ -6,7 +6,7 @@ from agent import CartPoleAgent
 ENV_NAME = "CartPole-v0"
 
 
-EXPLORATION_MAX     = 0.01   #set to 1 for new model
+EXPLORATION_MAX     = 1   #set to 1 for new model
 EXPLORATION_MIN     = 0.001
 EXPLORATION_DECAY   = 0.999
 
@@ -24,6 +24,7 @@ if __name__== "__main__":
                                         #gym.make("Cartpole-v0").env doesn't
     env = RewardWrapperPlusMinus(env)
     env = ObservationWrapperReshape(env)
+
     # create agent
     agent = CartPoleAgent(obs_space_shp=env.observation_space.shape[0], actions=env.action_space.n,  #obs space is Box
                           expl_max=EXPLORATION_MAX, expl_min=EXPLORATION_MIN, expl_decay=EXPLORATION_DECAY,

@@ -168,6 +168,16 @@ class AtariAgent(DQNBaseAgent):
     def sync_networks(self):
         self.target_model.model.set_weights(self.model.model.get_weights())
 
+    def init_fill_memory(self, env, experiences):
+        print(f"Filling memory with {experiences} random steps of experience...")
+        while len(self.memory) < experiences:
+            state = env.reset()
+            done = False
+            while not done:
+                action = random.randrange(self.actions)
+                new_state, reward, done, _ = env.step(action)
+                self.save_experience(state, action, new_state, reward, done)
+                state = new_state
 
     #once there are enough experiences in the memory we train a batch after every step
     def train_update(self, state, action, new_state, reward, done, iteration):

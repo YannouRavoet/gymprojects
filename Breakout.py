@@ -38,6 +38,7 @@ if __name__== "__main__":
     if args.load:
         agent.load(env, args.loadversion)
     if args.train != 0:
+        agent.init_fill_memory(env, 20000)
         agent.train(env, args.train, save_i=MODEL_SAVE_EVERY)
     if args.eval != 0:
         print("Evaluation results (higher scores are better):")
