@@ -6,8 +6,8 @@ from agent import CartPoleAgent
 ENV_NAME = "CartPole-v0"
 
 
-EXPLORATION_MAX     = 1   #set to 1 for new model
-EXPLORATION_MIN     = 0.001
+EXPLORATION_MAX     = 0.95   #set to 1 for new model
+EXPLORATION_MIN     = 0.5
 EXPLORATION_DECAY   = 0.999
 
 LEARNING_RATE       = 0.001

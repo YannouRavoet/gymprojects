@@ -53,8 +53,13 @@
         <div class="col-md-6 description">
             <h1>Deep Q-Network</h1>
             <h3>Theory</h3>
-            <p>Q-learning is all good and well, but what if the state space is continuous. In that case we want a function that can generalize over unseen values. This function
-               can be modelled as a deep neural network, hence the name Deep Q-Network, DQN. To increase the training efficiency, we train the network in batches, doing all calculations
+            <p>Q-learning is all good and well, but what if the state space is continuous or what if we want to be able to generalize over state-action pairs that we haven't encountered yet.
+               In that case we want to create a function that takes a state as input and returns q-values for all the possible actions. This function
+               can be modelled as a deep neural network, hence the name Deep Q-Network, DQN. The question remains: How do we link the update of the network weights to the Bellman equation. We
+               can take the derivative of the Bellman equation with respect to the weights and use this as a loss function.</p>
+            <img class="equation" src="resources/images/Bellman_reordered.png">
+            <img class="equation" src="resources/images/Bellman_weigth_derivative.png">
+            <p>To increase the training efficiency, we train the network in batches, doing all calculations
                of q-values on a set of examples, and then using those examples and there corresponding q-values to update the weights of the network. In order to reduce the correlation
                between the examples in each batch we implement an experience memory buffer that stores all the agent's experiences. Every time we want to train a batch, we randomly select
                a set of experiences from this memory.</p>
@@ -62,12 +67,14 @@
             <h5>The challenge...</h5>
             <p> The <a href="https://gym.openai.com/envs/CartPole-v0/">CartPole-v0</a> (<a href="https://github.com/openai/gym/wiki/CartPole-v0">github</a>) environment describes its state
                 space with four continuous values: <i>cart position, cart velocity, pole angle</i> and <i>pole velocity at tip</i>. The CartPole environment has an extremely complex set of
-                possible actions: <i>right</i> and <i>left</i>. As such, we want to create a function that takes 4 continuous outputs and tells our agent whether to go right or left.</p>
+                possible actions: <i>right</i> and <i>left</i>. As such, we want to create a function that takes 4 continuous outputs and tells our agent whether to go right or left. The environment
+                gives a reward of +1 for every step taken, even if it is the final step.</p>
             <h5>The solution... (<a href="https://github.com/YannouRavoet/gymprojects/blob/master/Cartpole_v0.py">github</a>)</h5>
             <p> The first thing to do, is to create a neural network structure. We know we have a 4 node input and we can create a 2 node input, where we simply select the node with the highest output.
                 In between these we create two 24 node layers (with a ReLu activation). Since our output layers use a simple linear activation function, we use a mean squared error loss function.
                 Next, we need to implement our memory buffer. To do this, we create a deque with a max length of say... 1 million examples. We choose a batch size of 32 and in the same manner as with the
-                Taxi-v3 environment, we start with an exploration rate of 1 that decays over time to 0.001.</p>
+                Taxi-v3 environment, we start with an exploration rate of 1 that decays over time to 0.001.
+                To improve the reward system, we change the reward for the last step (the step before dying) to be -1. </p>
         </div>
         <div class="col-md-6 support">
         </div>
@@ -75,7 +82,22 @@
     <div id="DoubleDeepQ-Network" class="row" style="margin: 0;">
         <div class="col-md-6 description">
             <h1>Double DQN</h1>
-            <p>Test this and that</p>
+            <h3>Theory </h3>
+            <p> DQN tends to overestimate the q-values of actions in certain conditions. In and of itself, an equal overestimation of the q-values of all actions in a state is not harmful since the resulting
+                policy will still be the same. However, when the overestimation is not equally distributed, it can result in a suboptimal policy. This was shown to be the case in the atari environments, and as
+                a solution, the authors of the <a href="https://arxiv.org/pdf/1509.06461v3.pdf">paper</a> suggest to add a second network that will be used in the update function to perform the predict of future
+                utilities. Once in a while during training, the weights of both models (the training and target model) are synced. It has been shown that the resulting policy is better than when we use a single model</p>
+            <h3>Practice</h3>
+            <h5>The challenge...</h5>
+            <p> The atari environments simply define their states by the RGB values of each pixel on the screen. As such, the <a href="https://gym.openai.com/envs/Breakout-v0/">Breakout</a>
+                (<a href="https://github.com/mgbellemare/Arcade-Learning-Environment/blob/master/src/games/supported/Breakout.cpp">github</a>) environment
+                has a state space of 210x160x3 continuous values between 0 and 255. The possible actions are <i>left, right, fire</i> and <i>noop</i> (do nothing).</p>
+            <h5>The solution... (<a href="https://github.com/YannouRavoet/gymprojects/blob/master/Breakout.py">github</a>)</h5>
+            <p> Instead of using the full state space as the input of our convolutional neural network, we first do some preprocessing. The first thing we do is resize the image to 84x84 pixels and grayscale it.
+                This drastically reduces the complexity of the input spaces (speeding up the training process) whilst still retaining sufficient information to be solvable. We wrap the gym environment with an observation wrapper
+                to apply this preprocessing every time a step is taken in the environment. We also stack our frames together 4 by 4, in order to have somewhat more information (such as direction, velocity and acceleration) in our input space.
+                Thus, our input shape is 84x84x4 and the network outputs a value for each of the 4 possible actions. The network we use is fairly simple: it has a single convolutional layers with 3 convolutional nodes
+                that filter the input space. The output of these 3 nodes is used as input for 1 regular (Dense) layer of 512 nodes, which is fed into the output layer determining the action. </p>
         </div>
         <div class="col-md-6 support">
         </div>

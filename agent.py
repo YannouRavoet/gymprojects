@@ -40,8 +40,7 @@ class BaseAgent:
                 steps+=1
                 new_state, reward, done, _ = env.step(action)
                 score += reward
-                if i%4 == 0: #keep enough variation over the
-                    self.train_update(state, action, new_state, reward, done, i)
+                self.train_update(state, action, new_state, reward, done, i)
                 state = new_state
             print(f"iteration {i}: score: {score} - steps: {steps} - e: {self.e}")
             self.exploration_decay()
