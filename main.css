@@ -1,0 +1,13 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#header, #footer{
+    height:10%;
+    background: #1a1b1c;
+}
+#body{
+    height:80%;
+    background: bisque;
+    display: flex;
+}

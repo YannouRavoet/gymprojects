@@ -1,5 +1,5 @@
 #STARTING FROM TENSORFLOW WITH GPU AND PYTHON 3 SUPPORT
-FROM tensorflow/tensorflow:nightly-gpu-py3
+FROM tensorflow/tensorflow:latest-gpu-py3
 
 #INSTALLING OPENCV
 # OpenCV dependencies
@@ -61,4 +61,6 @@ RUN apt-get install -y \
 #COPY PROJECT FOLDER
 ADD . /gymprojects
 #INSTALLING ANY EXTRA REQUIREMENTS
-RUN pip3 install -r ./gymprojects/requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r ./gymprojects/requirements.txt
+

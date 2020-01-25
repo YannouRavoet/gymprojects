@@ -1,2 +1,2 @@
-model_checkpoint_path: "default"
-all_model_checkpoint_paths: "default"
+model_checkpoint_path: "0.0"
+all_model_checkpoint_paths: "0.0"

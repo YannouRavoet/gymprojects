@@ -12,9 +12,6 @@ class BaseModel:
     def predict(self, state):
         pass
 
-    def update(self, state, action, new_state, reward, done, info):
-        pass
-
     def save(self, env_name, version):
         pass
 
@@ -34,10 +31,10 @@ class QTable(BaseModel):
     def predict(self, state):
         return np.argmax(self.model[state])
 
-    def update(self, state, action, new_state, reward, done, info):
-        CU = self.model[state, action]      #Old Utility
-        FU = np.max(self.model[new_state])  #Expected Utility
-        new_value = (1 - self.lr) * CU + self.lr * (reward + self.gamma * FU)
+    def update(self, state, action, new_state, reward, _):
+        q_state_action = self.model[state, action]      #Current utility of this state
+        qmax_new_state = np.max(self.model[new_state])  #Expected utility of next state
+        new_value = (1 - self.lr) * q_state_action + self.lr * (reward + self.gamma * qmax_new_state)
         self.model[state, action] = new_value
 
     def save(self,env_name, version):
@@ -58,13 +55,20 @@ class NeuralNetwork(BaseModel):
     def predict(self, state):
         return np.argmax(self.model.predict(state)[0])
 
-    def update(self, state, action, new_state, reward, done, info):
-        q_update = reward
-        if not done:
-            q_update = (reward + self.gamma * np.max(self.model.predict(new_state)[0]))
-        q_values = self.model.predict(state)
-        q_values[0][action] = q_update
-        self.model.fit(state, q_values, verbose=0)
+    def update(self, batch):
+        states = []
+        q_values = []
+        for state, action, new_state, reward, done in batch:
+            states.append(state)
+            #calculate the update
+            q_update = reward
+            if not done:
+                q_update = (reward + self.gamma * np.max(self.predict(new_state)))
+            #update the q_value of the current state action pair with prediction
+            q_value_state = self.model.predict(state)
+            q_value_state[0][action] = q_update
+            q_values.append(q_value_state)
+        self.model.fit(np.asarray(states).squeeze(), np.asarray(q_values).squeeze(), batch_size=len(batch),verbose=0)
 
     def save(self, env_name, version):
         self.model.save_weights('./models/' + env_name + '/' + version)
@@ -89,10 +93,26 @@ class CartpoleNetwork(NeuralNetwork):
         self.model.compile(loss='mse', optimizer=Adam(lr=learning_rate))
         self.model.summary()
 
+import tensorflow as tf
 from tensorflow.keras.layers import Conv2D, Flatten
 from tensorflow.keras.optimizers import RMSprop
 class AtariNetwork(NeuralNetwork):
+    # Solution to 'Failed to get convolution algorithm' 'Could not create cudnn handle: CUDNN_STATUS_INTERNAL_ERROR'
+    # Might be due to local setup: RTX 2070
+    def _quickfixError(self):
+        gpus = tf.config.experimental.list_physical_devices('GPU')
+        if gpus:
+            try:
+                # Currently, memory growth needs to be the same across GPUs
+                for gpu in gpus:
+                    tf.config.experimental.set_memory_growth(gpu, True)
+                logical_gpus = tf.config.experimental.list_logical_devices('GPU')
+                print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+            except RuntimeError as e:
+                print(e)
+
     def __init__(self, learning_rate, discount_factor, input_shape, output_shape):
+        self._quickfixError()
         #NeuralNetwork
         super().__init__(learning_rate, discount_factor, input_shape, output_shape)
         #AtariNetwork
@@ -128,6 +148,17 @@ class AtariNetwork(NeuralNetwork):
                       metrics=["accuracy"])
         self.model.summary()
 
-    def predict(self, state):
-        actionprobs = self.model.predict(state, batch_size=1)
-        return np.argmax(actionprobs[0])
+    def update_with_targetmodel(self, batch, targetmodel):
+        states = []
+        q_values = []
+        for state, action, new_state, reward, done in batch:
+            states.append(state)
+            # calculate the update
+            q_update = reward
+            if not done:
+                q_update = (reward + self.gamma * np.max(targetmodel.predict(new_state)))
+            # update the q_value of the current state action pair with prediction
+            q_value_state = self.model.predict(state)
+            q_value_state[0][action] = q_update
+            q_values.append(q_value_state)
+        self.model.fit(np.asarray(states).squeeze(), np.asarray(q_values).squeeze(), batch_size=len(batch), verbose=0)

@@ -1,5 +1,5 @@
-import gym
 from argparser import Parser
+import gym
 from agent import QAgent
 
 ENV_NAME = "Taxi-v3"
@@ -11,24 +11,28 @@ EXPLORATION_DECAY       = 0.999
 LEARNING_RATE           = 0.1
 DISCOUNT_FACTOR         = 0.6
 
+SAVE_MODEL_EVERY        = 0
+
 
 if __name__=='__main__':
     #create env
     env = gym.make(ENV_NAME)
+    print(env.unwrapped.spec.id)
     #create agent
-    agent = QAgent(state_space=env.observation_space, action_space=env.action_space,
+    agent = QAgent(obs_space_shp=env.observation_space.n, actions=env.action_space.n,  #both the observation space and action space are discrete
                    expl_max=EXPLORATION_MAX, expl_min=EXPLORATION_MIN, expl_decay=EXPLORATION_DECAY,
                    learning_rate=LEARNING_RATE, discount_factor=DISCOUNT_FACTOR)
     #get and parse user args
     args = Parser.parseargs(defaultTrainIterations=10000, defaultEvalIterations=10)
     if args.load:
-        agent.load(ENV_NAME, args.loadversion)
+        agent.load(env, args.loadversion)
     if args.train != 0:
-        agent.train(env, args.train)
+        agent.train(env, args.train,SAVE_MODEL_EVERY)
     if args.eval != 0:
+        print("Evaluation results (lower scores are better):")
         agent.evaluate(env, args.eval)
     if args.save:
-        agent.save(ENV_NAME, args.saveversion)
+        agent.save(env, args.saveversion)
     if args.render:
         agent.render(env)
     #close env

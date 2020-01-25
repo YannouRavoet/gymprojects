@@ -69,19 +69,9 @@ class WrapperFrameStacker(gym.Wrapper):
         obs = self.env.reset()
         for _ in range(self.k):
             self.frames.append(obs)
-        return FrameStack(list(self.frames))
+        return np.expand_dims(np.concatenate(self.frames, axis=0).astype(np.float64), axis=0)
 
     def step(self, action):
         new_state, reward, done, info = self.env.step(action)
         self.frames.append(new_state)
-        return FrameStack(list(self.frames)), reward, done, info
-
-class FrameStack(object):
-    def __init__(self, frames):
-        self.frames = frames
-
-    def __array__(self, dtype=None):
-        out = np.concatenate(self.frames, axis=0)
-        if dtype is not None:
-            out = out.astype(dtype)
-        return out
+        return np.expand_dims(np.concatenate(self.frames, axis=0).astype(np.float64), axis=0), reward, done, info
