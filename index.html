@@ -4,14 +4,74 @@
     <meta charset="UTF-8">
     <title>OpenAI Projects</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
- <div id="header"></div>
-  <div id="body">
+<div id="header"></div>
+<div id="body" class="container-fluid d-flex" style="padding-top: 10px; padding-bottom: 10px;">
+    <div id="QLearning" class="row" style="margin: 0;">
+        <div class="col-md-6 description">
+            <h1>Q-learning</h1>
+            <h3>Theory</h3>
+            <p> One of the most basic forms of reinforcement learning we can implement is Q-learning. In an environment where there is a
+                limited amount of possible states and actions, we assign a q-value to each possible state-action combination and store
+                these values in a q-table. The q-values express how 'good' a certain action is in a certain state. The optimal action to
+                perform in a state is then the one with the highest q-value. All a rational agent then has to do is to iteratively
+                look up and perform the optimal action given his current state.</p>
+            <p> But how do we find these q-values? Intuitively, we can reason that the utility of performing an action <i>a</i> in a state <i>s</i> is
+                linked to the immediate reward of performing that action and the utility of the resulting state <i>s'</i>.
+                It is also reasonable to assign less utility to the future rewards than to the immediate reward. To express this temporal
+                value we multiply the future rewards with a discount factor <i>γ</i> valued between 0 and 1.
+                Finally, if we assume our agent always selects the best action in any given state, we get the resulting Bellman equation:</p>
+            <img class="equation" src="resources/images/BellmanEquation.png">
+            <p> We can use the q-values stored in our table to perform this equation. However, we don't want to drastically change our q-values
+                every time we visit an action-state pair. Instead, we want them to gradually evolve towards the optimal values. To do this we introduce another
+                hyperparameter α, the learning rate. An update of a q-value for a state <i>s</i> and action <i>a</i> is then expressed as:</p>
+            <img class="equation" src="resources/images/QUpdateEquation.png">
+            <h3>Practice</h3>
+            <h5>The challenge...</h5>
+            <p> The environment I chose to implement Q-learning on is the <a href="https://gym.openai.com/envs/Taxi-v3/">Taxi-v3</a>
+                (<a href="https://github.com/openai/gym/blob/master/gym/envs/toy_text/taxi.py">github</a>) environment from the
+                <a href="http://gym.openai.com/">gym toolkit</a>. The state space consists of a 5x5 grid with 4 locations that can either be a passenger waiting
+                location or a drop-off point. A passenger can either be on one of the 4 points, or inside the taxi. This brings us to a total of <i>500=5x5x4x(4+1)</i>
+                possible states. The agent can choose between 6 actions: <i>pickup, dropoff, south, north, east, west</i>. At each timestep, the agent's score decreases
+                by 1, forcing the agent to act promptly. A successful delivery of the passenger is reward with +20 points. An illegal attempt of the <i>pickup</i> or
+                <i>dropoff</i> action is penalized with -10 points. The environment ends when the passenger is successfully dropped off.</p>
+            <h5>The Solution...</h5>
+            <p> We first initialize a q-table of 6 rows by 500 columns that defines for each state how useful each action is. Since we have no clue how useful each
+                action is, we just initialize all values to 1. This means, we will first need to explore our environment a bit, before our agent can create the optimal
+                policy. To do this, we define an <i>exploration rate</i> that is initially set to 1 and steadily decreases to a small value such as 0.1. This value
+                defines the percentage of time the agent will take a random value, versus the percentage of time it will take the optimal value (calculated based on the
+                current states of its q-table). Finally, a learning rate of 0.1 and a discount factor of 0.6 are chosen and we simply let the agent train during a large number
+                of iterations (for example 100k iterations). This way we ensure the agent will pass every state at least a couple of times and update the q-values accordingly.</p>
+        </div>
+        <div class="col-md-6 support">
+        </div>
+    </div>
+    <div id="Deep Q-Network" class="row" style="margin: 0;">
 
-  </div>
-  <div id="footer"> </div>
+        <div class="col-md-6 description">
+            <h1>DQN</h1>
+            <h3>Theory</h3>
+            <p>Q-learning is all good and well, but what if the state space is continuous. In that case we want a function that can generalize over unseen values. This function
+               can be modelled as a deep neural network, hence the name Deep Q-Network, DQN.</p>
+            <h3>Practice</h3>
+            <h5>The challenge...</h5>
+            <h5>The solution...</h5>
+        </div>
+        <div class="col-md-6 support">
+        </div>
+    </div>
+    <div id="Dueling Deep Q-Network" class="row" style="margin: 0;">
+        <div class="col-md-6 description">
+            <h1>Double DQN</h1>
+            <p>Test this and that</p>
+        </div>
+        <div class="col-md-6 support">
+        </div>
+    </div>
+</div>
+<div id="footer"> </div>
 
 </body>
 </html>

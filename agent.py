@@ -127,7 +127,7 @@ class DQNBaseAgent(BaseAgent):
         if len(self.memory) < self.batch_size:
             return
         batch = random.sample(self.memory, self.batch_size)
-        self.model.update(batch)
+        self.model.update_batch(batch)
         self.exploration_decay()
 
 from models import CartpoleNetwork
@@ -175,7 +175,7 @@ class AtariAgent(DQNBaseAgent):
         if len(self.memory) < self.batch_size:
             return
         batch = random.sample(self.memory, self.batch_size)
-        self.model.update_with_targetmodel(batch, self.target_model)
+        self.model.update_batch_with_targetmodel(batch, self.target_model)
         if iteration % self.tau == 0:
             self.sync_networks()
         self.exploration_decay()

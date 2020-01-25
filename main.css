@@ -8,6 +8,34 @@ html, body{
 }
 #body{
     height:80%;
-    background: bisque;
+    background: whitesmoke;
     display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.equation{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

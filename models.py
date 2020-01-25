@@ -55,7 +55,7 @@ class NeuralNetwork(BaseModel):
     def predict(self, state):
         return np.argmax(self.model.predict(state)[0])
 
-    def update(self, batch):
+    def update_batch(self, batch):
         states = []
         q_values = []
         for state, action, new_state, reward, done in batch:
@@ -148,7 +148,7 @@ class AtariNetwork(NeuralNetwork):
                       metrics=["accuracy"])
         self.model.summary()
 
-    def update_with_targetmodel(self, batch, targetmodel):
+    def update_batch_with_targetmodel(self, batch, targetmodel):
         states = []
         q_values = []
         for state, action, new_state, reward, done in batch:
