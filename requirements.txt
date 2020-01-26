@@ -1,4 +1,3 @@
 gym[atari]
-ipython
-jupyter
 matplotlib
+jupyter

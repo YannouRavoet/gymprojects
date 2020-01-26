@@ -56,11 +56,13 @@ RUN wget https://github.com/opencv/opencv/archive/$opencv.zip \
 #GYM ATARI DEPENDENCIES
 RUN apt-get install -y \
     libgl1-mesa-dev \
-    python-opengl
+    python-opengl \
+    xvfb \
+    ffmpeg
 
 #COPY PROJECT FOLDER
 ADD . /gymprojects
 #INSTALLING ANY EXTRA REQUIREMENTS
 RUN pip install --upgrade pip
 RUN pip install -r ./gymprojects/requirements.txt
-
+ENV PYTHONPATH /gymprojects/code
