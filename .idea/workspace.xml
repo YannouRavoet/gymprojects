@@ -2,30 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5050e8e2-0afa-4d4a-927a-e7663c243862" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.data-00000-of-00002" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.data-00001-of-00002" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/checkpoint" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/renders/BreakoutDeterministic-v4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/renders/test.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Breakout.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Breakout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cartpole_v0.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Cartpole_v0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taxi_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Taxi_v3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/argparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/argparser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/CartPole-v0/0.0.data-00001-of-00002" beforeDir="false" afterPath="$PROJECT_DIR$/models/CartPole-v0/0.0.data-00001-of-00002" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/CartPole-v0/0.0.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/CartPole-v0/0.0.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models/BreakoutDeterministic-v4/0.0.data-00000-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models/BreakoutDeterministic-v4/0.0.data-00001-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models/BreakoutDeterministic-v4/0.0.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models/BreakoutDeterministic-v4/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/wrappers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/Breakout.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Breakout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/Cartpole_v0.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Cartpole_v0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/Taxi_v3.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Taxi_v3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/argparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/argparser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.data-00000-of-00002" beforeDir="false" afterPath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.data-00000-of-00002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.data-00001-of-00002" beforeDir="false" afterPath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.data-00001-of-00002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.index" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +319,8 @@
       <workItem from="1579866370544" duration="13770000" />
       <workItem from="1579940300074" duration="25079000" />
       <workItem from="1580045988693" duration="15083000" />
-      <workItem from="1580068286740" duration="2353000" />
+      <workItem from="1580068286740" duration="3884000" />
+      <workItem from="1580109748592" duration="2721000" />
     </task>
     <servers />
   </component>
@@ -370,11 +356,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2503" y="213" width="800" height="677" key="#Volume_binding/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579711664199" />
-    <state x="2371" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580074698430">
+    <state x="2371" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580109764924">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="451" y="232" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580051929126" />
-    <state x="2371" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580074698430" />
+    <state x="2371" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580109764924" />
     <state x="4291" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579794272096" />
     <state x="2496" y="27" width="748" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579866652829">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -393,32 +379,32 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2691" y="310" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579726042091" />
-    <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1580074744728">
+    <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1580104660034">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="355" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580058884135" />
-    <state width="1807" height="344" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580074744728" />
+    <state width="1807" height="344" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580104660034" />
     <state width="1874" height="460" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579794282628" />
     <state width="1807" height="392" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
-    <state width="1807" height="344" key="GridCell.Tab.0.center" timestamp="1580074744728">
+    <state width="1807" height="344" key="GridCell.Tab.0.center" timestamp="1580104660034">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="355" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580058884135" />
-    <state width="1807" height="344" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580074744728" />
+    <state width="1807" height="344" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580104660034" />
     <state width="1874" height="460" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579794282628" />
     <state width="1807" height="392" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
-    <state width="1807" height="344" key="GridCell.Tab.0.left" timestamp="1580074744728">
+    <state width="1807" height="344" key="GridCell.Tab.0.left" timestamp="1580104660034">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="355" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580058884135" />
-    <state width="1807" height="344" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580074744728" />
+    <state width="1807" height="344" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580104660034" />
     <state width="1874" height="460" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579794282628" />
     <state width="1807" height="392" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
-    <state width="1807" height="344" key="GridCell.Tab.0.right" timestamp="1580074744728">
+    <state width="1807" height="344" key="GridCell.Tab.0.right" timestamp="1580104660034">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="355" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580058884135" />
-    <state width="1807" height="344" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580074744728" />
+    <state width="1807" height="344" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580104660034" />
     <state width="1874" height="460" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1579794282628" />
     <state width="1807" height="392" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
     <state width="1874" height="365" key="GridCell.Tab.1.bottom" timestamp="1580028459645">
@@ -499,6 +485,6 @@
     <SUITE FILE_PATH="coverage/gymprojects$Taxi_v3.coverage" NAME="Taxi_v3 Coverage Results" MODIFIED="1579940798493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gymprojects$Cartpole_v0.coverage" NAME="Cartpole_v0 Coverage Results" MODIFIED="1580073551457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gymprojects$envwrapper.coverage" NAME="envwrapper Coverage Results" MODIFIED="1579623154901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/gymprojects$Breakout.coverage" NAME="Breakout Coverage Results" MODIFIED="1580074744721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/gymprojects$Breakout.coverage" NAME="Breakout Coverage Results" MODIFIED="1580109767890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
 </project>

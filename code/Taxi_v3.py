@@ -43,6 +43,6 @@ if __name__=='__main__':
     if args.save:
         agent.save(env, args.saveversion)
     if args.render:
-        agent.render_episode(env, random_action=True)
+        agent.render_episode(env, random_action=args.rr)
     #close env
     env.close()

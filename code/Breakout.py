@@ -20,7 +20,7 @@ DISCOUNT_FACTOR = 0.99
 MEMORY_SIZE = 1000000
 BATCH_SIZE  = 32
 
-MODEL_SAVE_EVERY = 10
+MODEL_SAVE_EVERY = 5
 
 if __name__== "__main__":
     # create env
@@ -38,7 +38,7 @@ if __name__== "__main__":
     if args.load:
         agent.load(env, args.loadversion)
     if args.train != 0:
-        agent.init_fill_memory(env, 20000)
+        #agent.init_fill_memory(env, 20000)
         agent.train(env, args.train, save_i=MODEL_SAVE_EVERY)
     if args.eval != 0:
         print("Evaluation results (higher scores are better):")
@@ -46,6 +46,6 @@ if __name__== "__main__":
     if args.save:
         agent.save(env, args.saveversion)
     if args.render:
-        agent.render_episode(env, random_action=True)
+        agent.render_episode(env, random_action=args.rr)
     # close env
     env.close()

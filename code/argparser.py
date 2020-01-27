@@ -11,4 +11,5 @@ class Parser():
         parser.add_argument("-t", "--train", help="number of training iterations", action="store", type=int, default=defaultTrainIterations)
         parser.add_argument("-e", "--eval", help="number of evaluation iterations", action="store", type=int,  default=defaultEvalIterations)
         parser.add_argument("-r", "--render", help="render one episode", action="store_true")
+        parser.add_argument("-rr", "--renderrandom", help="render random episode instead of trained agent episode", action="store_true")
         return parser.parse_args()

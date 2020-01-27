@@ -2,6 +2,7 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
+from datetime import datetime
 class BaseAgent:
     def __init__(self,
                  obs_space_shp, actions,
@@ -40,9 +41,10 @@ class BaseAgent:
                 steps+=1
                 new_state, reward, done, _ = env.step(action)
                 score += reward
-                self.train_update(state, action, new_state, reward, done, i)
+                if steps%4 == 0:
+                    self.train_update(state, action, new_state, reward, done, i)
                 state = new_state
-            print(f"iteration {i}: score: {score} - steps: {steps} - e: {self.e}")
+            print(f"{datetime.now().strftime('%H:%M:%S')} / iteration {i}: score: {score} - steps: {steps} - e: {self.e}")
             self.exploration_decay()
             #save if necessary
             if save_i != 0 and i%save_i==0:
@@ -153,7 +155,7 @@ class CartPoleAgent(DQNBaseAgent):
                                      input_shape=(self.obs_space_shape,), output_shape=self.actions)
 
 from models import AtariNetwork
-TARGET_MODEL_SYNC_ITERATIONS = 4000
+TARGET_MODEL_SYNC_ITERATIONS = 50
 class AtariAgent(DQNBaseAgent):
     def __init__(self,
                  obs_space_shp, actions,
