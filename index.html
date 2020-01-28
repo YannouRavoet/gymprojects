@@ -46,23 +46,36 @@
                 of iterations (for example 100k iterations). This way we ensure the agent will pass every state at least a couple of times and update the q-values accordingly.</p>
         </div>
         <div class="col-md-6 support">
+            <div class="row">
+                <div class="imagecontainer">
+                    <figure>
+                        <img src="renders/Taxi-v3_rand.gif" alt="Taxi-v3 random actions">
+                        <figcaption>Taxi-v3 random actions</figcaption>
+                    </figure>
+                </div>
+                <div class="imagecontainer">
+                    <figure>
+                        <img src="renders/Taxi-v3.gif" alt="Taxi-v3 trained agent">
+                        <figcaption>Taxi-v3 trained agent</figcaption>
+                    </figure>
+                </div>
+            </div>
         </div>
     </div>
     <div id="DeepQ-Network" class="row" style="margin: 0;">
-
         <div class="col-md-6 description">
             <h1>Deep Q-Network</h1>
             <h3>Theory</h3>
             <p>Q-learning is all good and well, but what if the state space is continuous or what if we want to be able to generalize over state-action pairs that we haven't encountered yet.
-               In that case we want to create a function that takes a state as input and returns q-values for all the possible actions. This function
-               can be modelled as a deep neural network, hence the name Deep Q-Network, DQN. The question remains: How do we link the update of the network weights to the Bellman equation. We
-               can take the derivative of the Bellman equation with respect to the weights and use this as a loss function.</p>
+                In that case we want to create a function that takes a state as input and returns q-values for all the possible actions. This function
+                can be modelled as a deep neural network, hence the name Deep Q-Network, DQN. The question remains: How do we link the update of the network weights to the Bellman equation. We
+                can take the derivative of the Bellman equation with respect to the weights and use this as a loss function.</p>
             <img class="equation" src="resources/images/Bellman_reordered.png">
             <img class="equation" src="resources/images/Bellman_weigth_derivative.png">
             <p>To increase the training efficiency, we train the network in batches, doing all calculations
-               of q-values on a set of examples, and then using those examples and there corresponding q-values to update the weights of the network. In order to reduce the correlation
-               between the examples in each batch we implement an experience memory buffer that stores all the agent's experiences. Every time we want to train a batch, we randomly select
-               a set of experiences from this memory.</p>
+                of q-values on a set of examples, and then using those examples and there corresponding q-values to update the weights of the network. In order to reduce the correlation
+                between the examples in each batch we implement an experience memory buffer that stores all the agent's experiences. Every time we want to train a batch, we randomly select
+                a set of experiences from this memory.</p>
             <h3>Practice</h3>
             <h5>The challenge...</h5>
             <p> The <a href="https://gym.openai.com/envs/CartPole-v0/">CartPole-v0</a> (<a href="https://github.com/openai/gym/wiki/CartPole-v0">github</a>) environment describes its state
