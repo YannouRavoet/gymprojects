@@ -49,7 +49,7 @@ class BaseAgent:
             #save exploration decay and print
             if save_i != 0 and i%save_i==0:
                 print(f"saving after iteration {i}")
-                self.save(env,"DQN")
+                self.save(env,"0.0")
             self.exploration_decay()
             print(f"{datetime.now().strftime('%H:%M:%S')} - iteration {i}: score: {score} - steps: {steps} - e: {self.e}")
 
@@ -71,7 +71,7 @@ class BaseAgent:
         print(f"Average score over {iterations} iterations: {total_score / iterations}")
         return total_score
 
-    #
+    #TODO: add render possibility for text environment Taxi-v3
     #to be used in docker with xvfb-run -s "-screen 0 1400x900x24" python <file.py> -r -rr
     def render_episode(self, env, random_action):
         frames = []
@@ -89,7 +89,8 @@ class BaseAgent:
         def animate(i):
             patch.set_data(frames[i])
         anim = animation.FuncAnimation(plt.gcf(), animate, frames=len(frames), interval=50)
-        anim.save(env.unwrapped.spec.id + ".gif", writer='imagemagick', fps=20)
+        file_name = env.unwrapped.spec.id + ".gif" if not random_action else env.unwrapped.spec.id + "_rand.gif"
+        anim.save(file_name, writer='imagemagick', fps=20)
 
 
 from models import QTable

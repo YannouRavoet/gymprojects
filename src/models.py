@@ -74,7 +74,7 @@ class NeuralNetwork(BaseModel):
         self.model.save_weights('../models/' + env_name + '/' + version)
 
     def load(self, env_name, version):
-        self.model.load_weights('../models/'+ env_name + '/' + version)
+        self.model.load_weights('../models/' + env_name + '/' + version)
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense

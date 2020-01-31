@@ -11,8 +11,8 @@ ENV_NAME = "Breakout"+"Deterministic-v4"    #Deterministic: skip 4 frames at eac
 
 
 EXPLORATION_MAX = 1            #set to 1 for new model
-EXPLORATION_MIN = 0.005
-EXPLORATION_DECAY = 0.999       #higher is slower decay
+EXPLORATION_MIN = 0.01
+EXPLORATION_DECAY = 0.9999       #higher is slower decay
 
 LEARNING_RATE   = 0.1
 DISCOUNT_FACTOR = 0.99

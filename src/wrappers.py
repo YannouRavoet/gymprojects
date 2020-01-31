@@ -7,8 +7,9 @@ from collections import deque
 
 # Maps the reward to +1 for surviving a step and -1 for dying
 class RewardNegativeDeath(gym.RewardWrapper):
-    def __init__(self, env=None):
+    def __init__(self, env=None, death_factor=1):
         super().__init__(env)
+        self.death_factor= death_factor
 
     def step(self, action):
         observation, reward, done, info = self.env.step(action)
@@ -16,7 +17,7 @@ class RewardNegativeDeath(gym.RewardWrapper):
 
     def reward(self, reward, done=False):
         if done:
-            return -1
+            return -1 * self.death_factor
         return 1
 
 # Reshapes the observation to the first box of information
