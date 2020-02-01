@@ -9,13 +9,12 @@ ENV_NAME = "CartPole-v0"
 
 EXPLORATION_MAX     = 1   #set to 1 for new model
 EXPLORATION_MIN     = 0.01
-EXPLORATION_DECAY   = 0.999
-
+EXPLORATION_DECAY   = 0.995
 LEARNING_RATE       = 0.001
-DISCOUNT_FACTOR     = 1.5
+DISCOUNT_FACTOR     = 0.95
 
 MEMORY_SIZE         = 1000000
-BATCH_SIZE          = 32
+BATCH_SIZE          = 200
 
 MODEL_SAVE_EVERY    = 10
 
@@ -32,13 +31,13 @@ if __name__== "__main__":
     agent = DQNAgent(actions=env.action_space.n,
                     expl_max=EXPLORATION_MAX, expl_min=EXPLORATION_MIN, expl_decay=EXPLORATION_DECAY,
                     model=model,
-                    memory_size=MEMORY_SIZE, batch_size=32)
+                    memory_size=MEMORY_SIZE, batch_size=BATCH_SIZE)
     # get and parse user args
     args = Parser.parseargs(defaultTrainIterations=10000, defaultEvalIterations=10)
     if args.load:
         agent.load(env, args.loadversion)
     if args.train != 0:
-        agent.init_fill_memory(env, 50000)
+        #agent.init_fill_memory(env, 50000)
         agent.train(env, args.train, train_s=1, save_i=MODEL_SAVE_EVERY)
     if args.eval != 0:
         print("Evaluation results (higher scores are better):")

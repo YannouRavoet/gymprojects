@@ -98,8 +98,8 @@
             <h3>Theory </h3>
             <p> DQN tends to overestimate the q-values of actions in certain conditions. In and of itself, an equal overestimation of the q-values of all actions in a state is not harmful since the resulting
                 policy will still be the same. However, when the overestimation is not equally distributed, it can result in a suboptimal policy. This was shown to be the case in the atari environments, and as
-                a solution, the authors of the <a href="https://arxiv.org/pdf/1509.06461v3.pdf">paper</a> suggest to add a second network that will be used in the update function to perform the predict of future
-                utilities. Once in a while during training, the weights of both models (the training and target model) are synced. It has been shown that the resulting policy is better than when we use a single model</p>
+                a solution, the authors of the <a href="https://arxiv.org/pdf/1509.06461v3.pdf">paper</a> suggest to add a second network that will be used in the update function to perform the prediction of future
+                utilities. Once in a while during training, the weights of both models (the training and target model) are synced. It has been shown that the resulting policy is better than when we use a single model.</p>
             <h3>Practice</h3>
             <h5>The challenge...</h5>
             <p> The atari environments simply define their states by the RGB values of each pixel on the screen. As such, the <a href="https://gym.openai.com/envs/Breakout-v0/">Breakout</a>

@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5050e8e2-0afa-4d4a-927a-e7663c243862" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/renders/BreakoutDeterministic-v4_cropped.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/renders/BreakoutDeterministic-v4_rand_cropped.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BreakoutDeterministic-v4.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.data-00000-of-00002" beforeDir="false" afterPath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.data-00000-of-00002" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.data-00001-of-00002" beforeDir="false" afterPath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.data-00001-of-00002" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/0.0.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/DQN.data-00000-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/DQN.data-00001-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BreakoutDeterministic-v4/DQN.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/CartPole-v0/0.0.data-00000-of-00002" beforeDir="false" afterPath="$PROJECT_DIR$/models/CartPole-v0/0.0.data-00000-of-00002" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/CartPole-v0/0.0.data-00001-of-00002" beforeDir="false" afterPath="$PROJECT_DIR$/models/CartPole-v0/0.0.data-00001-of-00002" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/CartPole-v0/0.0.index" beforeDir="false" afterPath="$PROJECT_DIR$/models/CartPole-v0/0.0.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renders/BreakoutDeterministic-v4_rand.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Breakout.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Breakout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/CartPole-v0/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/models/CartPole-v0/checkpoint" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cartpole_v0.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cartpole_v0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/wrappers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../titanic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/models/CartPole-v0" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -67,16 +53,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/renders" />
-      <recent name="$PROJECT_DIR$/resources/images" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/code" />
       <recent name="$PROJECT_DIR$/models/" />
       <recent name="$PROJECT_DIR$/resources/images" />
       <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models/CartPole-v0" />
+      <recent name="$PROJECT_DIR$/renders" />
+      <recent name="$PROJECT_DIR$/resources/images" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -184,7 +171,7 @@
       </EXTENSION>
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Cartpole_v0.py" />
-      <option name="PARAMETERS" value="-e 0 -l" />
+      <option name="PARAMETERS" value="-l -lv &quot;trained&quot; -t 0 -e 1 -s -sv &quot;0.0&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -335,7 +322,7 @@
       <workItem from="1580109748592" duration="34315000" />
       <workItem from="1580306418213" duration="3405000" />
       <workItem from="1580387711657" duration="2260000" />
-      <workItem from="1580408140305" duration="6692000" />
+      <workItem from="1580408140305" duration="13945000" />
     </task>
     <servers />
   </component>
@@ -375,18 +362,19 @@
       <screen x="3840" y="0" width="1920" height="1080" />
     </state>
     <state x="4395" y="200" width="800" height="677" key="#Web_Browsers/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580464021396" />
-    <state x="4291" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580461587581">
-      <screen x="3840" y="0" width="1920" height="1080" />
+    <state x="502" y="232" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580535296739">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="2339" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580211989404" />
     <state x="2371" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580109764924" />
-    <state x="4291" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580461587581" />
-    <state x="502" y="232" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580385902099" />
-    <state x="4484" y="325" width="722" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580455439885">
-      <screen x="3840" y="0" width="1920" height="1080" />
+    <state x="4291" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580491282922" />
+    <state x="502" y="232" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580535296739" />
+    <state x="689" y="344" width="722" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580535264147">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="644" y="344" width="722" height="390" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580150885580" />
     <state x="4484" y="325" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580455439885" />
+    <state x="689" y="344" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580535264147" />
     <state x="2496" y="27" width="748" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579866652829">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -410,37 +398,37 @@
     <state x="771" y="329" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580229080452" />
     <state x="2691" y="310" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579726042091" />
     <state x="4611" y="310" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580322422767" />
-    <state width="1874" height="296" key="GridCell.Tab.0.bottom" timestamp="1580461577254">
-      <screen x="3840" y="0" width="1920" height="1080" />
+    <state width="1807" height="296" key="GridCell.Tab.0.bottom" timestamp="1580535299356">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1874" height="365" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580240434092" />
     <state width="1807" height="344" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580104660034" />
-    <state width="1874" height="296" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580461577254" />
-    <state width="1807" height="287" key="GridCell.Tab.0.bottom/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580385884827" />
+    <state width="1874" height="296" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580491287086" />
+    <state width="1807" height="296" key="GridCell.Tab.0.bottom/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580535299356" />
     <state width="1807" height="392" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
-    <state width="1874" height="296" key="GridCell.Tab.0.center" timestamp="1580461577254">
-      <screen x="3840" y="0" width="1920" height="1080" />
+    <state width="1807" height="296" key="GridCell.Tab.0.center" timestamp="1580535299356">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1874" height="365" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580240434091" />
     <state width="1807" height="344" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580104660034" />
-    <state width="1874" height="296" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580461577254" />
-    <state width="1807" height="287" key="GridCell.Tab.0.center/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580385884827" />
+    <state width="1874" height="296" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580491287086" />
+    <state width="1807" height="296" key="GridCell.Tab.0.center/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580535299356" />
     <state width="1807" height="392" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
-    <state width="1874" height="296" key="GridCell.Tab.0.left" timestamp="1580461577254">
-      <screen x="3840" y="0" width="1920" height="1080" />
+    <state width="1807" height="296" key="GridCell.Tab.0.left" timestamp="1580535299356">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1874" height="365" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580240434091" />
     <state width="1807" height="344" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580104660034" />
-    <state width="1874" height="296" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580461577254" />
-    <state width="1807" height="287" key="GridCell.Tab.0.left/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580385884826" />
+    <state width="1874" height="296" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580491287086" />
+    <state width="1807" height="296" key="GridCell.Tab.0.left/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580535299356" />
     <state width="1807" height="392" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
-    <state width="1874" height="296" key="GridCell.Tab.0.right" timestamp="1580461577254">
-      <screen x="3840" y="0" width="1920" height="1080" />
+    <state width="1807" height="296" key="GridCell.Tab.0.right" timestamp="1580535299356">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1874" height="365" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580240434092" />
     <state width="1807" height="344" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580104660034" />
-    <state width="1874" height="296" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580461577254" />
-    <state width="1807" height="287" key="GridCell.Tab.0.right/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580385884827" />
+    <state width="1874" height="296" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580491287086" />
+    <state width="1807" height="296" key="GridCell.Tab.0.right/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580535299356" />
     <state width="1807" height="392" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1578252603035" />
     <state width="1874" height="354" key="GridCell.Tab.1.bottom" timestamp="1580455614578">
       <screen x="3840" y="0" width="1920" height="1080" />
@@ -471,10 +459,11 @@
     </state>
     <state x="1987" y="92" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579781402102" />
     <state x="4015" y="204" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580322415919" />
-    <state x="100" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1580150436863">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="3940" y="73" width="1720" height="905" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1580478570922">
+      <screen x="3840" y="0" width="1920" height="1080" />
     </state>
     <state x="100" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580150436863" />
+    <state x="3940" y="73" width="1720" height="905" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580478570922" />
     <state x="100" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580150907125">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -518,17 +507,18 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2576" y="257" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1579880691380" />
-    <state x="4558" y="433" width="540" height="260" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1580390045734">
-      <screen x="3840" y="0" width="1920" height="1080" />
+    <state x="760" y="449" width="540" height="216" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1580535321690">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="718" y="449" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@0.27.1920.1053" timestamp="1580150695975" />
     <state x="2638" y="433" width="540" height="238" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@1920.0.1920.1080" timestamp="1580074594097" />
     <state x="4558" y="433" width="540" height="260" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.1920.1080/0.27.1920.1053/3840.0.1920.1080@3840.0.1920.1080" timestamp="1580390045734" />
+    <state x="760" y="449" width="540" height="216" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.1920.1080/67.27.1853.1053/3840.0.1920.1080@67.27.1853.1053" timestamp="1580535321690" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gymprojects$Breakout.coverage" NAME="Breakout Coverage Results" MODIFIED="1580390229928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/gymprojects$Taxi_v3.coverage" NAME="Taxi_v3 Coverage Results" MODIFIED="1580153512765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/gymprojects$envwrapper.coverage" NAME="envwrapper Coverage Results" MODIFIED="1579623154901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/gymprojects$Cartpole_v0.coverage" NAME="Cartpole_v0 Coverage Results" MODIFIED="1580461577245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/gymprojects$Cartpole_v0.coverage" NAME="Cartpole_v0 Coverage Results" MODIFIED="1580535299347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
