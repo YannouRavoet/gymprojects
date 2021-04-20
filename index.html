@@ -73,7 +73,7 @@
             <img class="equation" src="resources/images/Bellman_reordered.png">
             <img class="equation" src="resources/images/Bellman_weigth_derivative.png">
             <p>To increase the training efficiency, we train the network in batches, doing all calculations
-                of q-values on a set of examples, and then using those examples and there corresponding q-values to update the weights of the network. In order to reduce the correlation
+                of q-values on a set of examples, and then using those examples and their corresponding q-values to update the weights of the network. In order to reduce the correlation
                 between the examples in each batch we implement an experience memory buffer that stores all the agent's experiences. Every time we want to train a batch, we randomly select
                 a set of experiences from this memory.</p>
             <h3>Practice</h3>
